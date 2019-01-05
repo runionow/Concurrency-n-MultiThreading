@@ -18,7 +18,7 @@ public class ProdConMain {
 
 
         Runnable producer = () -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < BUFFER_SIZE; i++) {
                 try {
                     prod.produce();
                 } catch (InterruptedException e) {
@@ -28,7 +28,7 @@ public class ProdConMain {
         };
 
         Runnable consumer = () -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < BUFFER_SIZE; i++) {
                 try {
                     cons.consume();
                 } catch (InterruptedException e) {
