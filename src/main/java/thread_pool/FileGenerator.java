@@ -13,7 +13,7 @@ public class FileGenerator {
     }
 
     public void generateFile() {
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(this.outfile))) {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(this.outfile+1))) {
             for (int i = 0; i < 100; i++) {
                 writer.write(String.valueOf(i));
                 writer.newLine();
